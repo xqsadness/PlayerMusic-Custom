@@ -11,6 +11,7 @@ import AudioControls from "./components/audioControl";
 import pauseImg from "./images/pause.png";
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
+import { Link } from "react-router-dom";
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   const [livestream, playLiveStream] = useState(false);
   const [pauseScreen, setPauseScreen] = useState("pauseScreen");
   const [currentLivestream, setLivestream] = useState(
-    "https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl"
+    "https://youtu.be/TURbeWK2wwg"
   );
 
   const [stationName, setStationName] = useState("LofiGirl");
@@ -82,12 +83,12 @@ function App() {
 
   const AmbientRenders = () => {
     setVideo("//www.youtube.com/embed/hBGbt2CRDpA?autoplay=1&mute=1&start=1");
-    setStationName("Ambient Renders");
+    setStationName("Rain Lofi");
     setYoutubeChannal(
-      "https://www.youtube.com/channel/UCXbXfisDHV_gDjawCKTyTIw"
+      "https://youtu.be/_2uVuxLgMGc"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=GlEps1Ra06U&ab_channel=RelaxingAmbienceASMR"
+      "https://youtu.be/_2uVuxLgMGc"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -202,12 +203,13 @@ function App() {
 
   const Spinnin = () => {
     setVideo("//www.youtube.com/embed/N65Jb683pXQ?autoplay=1&mute=1&start=0");
-    setStationName("Spinnin' Records");
+    // setVideo("//www.youtube.com/embed/0mydT7N94Pc?autoplay=1&mute=1&start=0");
+    setStationName("Interupt  Power ");
     setYoutubeChannal(
-      "https://www.youtube.com/channel/UCpDJl2EmP7Oh90Vylx0dZtA"
+      "https://youtu.be/0mydT7N94Pc"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=N65Jb683pXQ&ab_channel=Spinnin%27Records"
+      "https://youtu.be/0mydT7N94Pc"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -234,10 +236,24 @@ function App() {
 
   const animeVibe = () => {
     setVideo("//www.youtube.com/embed/5B7Rsw0L2r8?autoplay=1&mute=1&start=0");
-    setStationName("CallYourName");
-    setYoutubeChannal("https://youtu.be/rdGThD7Gj3U");
+    setStationName("Call Your Name");
+    setYoutubeChannal("https://youtu.be/UfT18Gd1cUw");
     setLivestream(
-      "https://youtu.be/rdGThD7Gj3U"
+      "https://youtu.be/UfT18Gd1cUw"
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
+  const iDo = () => {
+    setVideo("//www.youtube.com/embed/X3ViqgQW4Kk?autoplay=1&mute=1&start=0");
+    setStationName("Top Lofi US-UK");
+    setYoutubeChannal("https://youtu.be/X3ViqgQW4Kk");
+    setLivestream(
+      "https://youtu.be/X3ViqgQW4Kk"
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -249,7 +265,7 @@ function App() {
   return (
     <div className="interfaceContainer">
       <div className="radioContainer">
-        <div className="logo">Dawn Music</div>
+        <Link style={{textDecoration: "none"}} to="/" className="logo">Dawn Music</Link>
         <div className="subHeading"></div>
         <div className="radioStationsContainer">
           <RadioStations
@@ -265,6 +281,7 @@ function App() {
             Study={StudyMD}
             Jazz={theJazzHopCafe}
             Nice={NiceGuys}
+            IDo={iDo}
           />
         </div>
         <div className="socialsContainer2">

@@ -13,6 +13,7 @@ const RadioStations = ({
   High,
   Lofi,
   Study,
+  IDo,
   Jazz,
   Nice
 }) => {
@@ -134,7 +135,7 @@ const RadioStations = ({
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          Spinnin Records
+          Interupt - Power
         </motion.div>
       </motion.div>
 
@@ -146,9 +147,24 @@ const RadioStations = ({
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          Can We Kiss Forever
+         Can we kiss forever
         </motion.div>
       </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.05 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={IDo}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          Top Lofi US UK
+        </motion.div>
+      </motion.div>
+
+
+    
 
       <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.15 }}>
         <motion.div
